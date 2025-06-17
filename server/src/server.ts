@@ -5,6 +5,10 @@ import dotenv from 'dotenv';
 import express from 'express';
 import routes from './routes/index.js';
 import { sequelize } from './models/index.js';
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 dotenv.config();
 
 const app = express();
